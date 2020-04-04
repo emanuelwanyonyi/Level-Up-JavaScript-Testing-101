@@ -1,6 +1,11 @@
-import { add } from './App';
+import { add, total } from './App';
 
+// Unit Test
 test('add', () => {
-    const value = add(1, 2);
-    expect(value).toEqual(3)
-})
+    expect(add(1, 2)).toEqual(3)
+}) 
+
+// An intergrated test, since the total functions relays on add function
+test('total', () => {
+    expect(total(5, 20)).toEqual('Ksh. 25')
+}) 
